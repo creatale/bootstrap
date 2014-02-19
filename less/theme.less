@@ -8,46 +8,55 @@
 
 
 
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: @line-height-computed;
+  margin-bottom: @line-height-computed;
+  font-family: @font-family-sans-serif;
+  font-weight: bold;
+}
+
 //
 // Buttons
 // --------------------------------------------------
 
 // Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
+// .btn-default,
+// .btn-primary,
+// .btn-success,
+// .btn-info,
+// .btn-warning,
+// .btn-danger {
+//   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+//   @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+//   .box-shadow(@shadow);
 
-  // Reset the shadow
-  &:active,
-  &.active {
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-  }
-}
+//   // Reset the shadow
+//   &:active,
+//   &.active {
+//     .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+//   }
+// }
 
 // Mixin for generating new styles
 .btn-styles(@btn-color: #555) {
-  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
-  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
-  background-repeat: repeat-x;
-  border-color: darken(@btn-color, 14%);
+  // #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
+  // .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  // background-repeat: repeat-x;
+  // border-color: darken(@btn-color, 14%);
 
-  &:hover,
-  &:focus  {
-    background-color: darken(@btn-color, 12%);
-    background-position: 0 -15px;
-  }
+  // &:hover,
+  // &:focus  {
+  //   background-color: darken(@btn-color, 12%);
+  //   background-position: 0 -15px;
+  // }
 
-  &:active,
-  &.active {
-    background-color: darken(@btn-color, 12%);
-    border-color: darken(@btn-color, 14%);
-  }
+  // &:active,
+  // &.active {
+  //   background-color: darken(@btn-color, 12%);
+  //   border-color: darken(@btn-color, 14%);
+  // }
 }
 
 // Common styles
@@ -60,7 +69,7 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #FFF; }
 .btn-primary { .btn-styles(@btn-primary-bg); }
 .btn-success { .btn-styles(@btn-success-bg); }
 .btn-info    { .btn-styles(@btn-info-bg); }

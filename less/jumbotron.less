@@ -8,13 +8,18 @@
   margin-bottom: @jumbotron-padding;
   color: @jumbotron-color;
   background-color: @jumbotron-bg;
+  text-align: center;
 
   h1,
   .h1 {
     color: @jumbotron-heading-color;
+    border: 4px solid @jumbotron-heading-color;
+    display: inline-block;
+    padding: (@line-height-computed / 3) (@line-height-computed * 2);
+    margin-bottom: @jumbotron-padding;
   }
   p {
-    margin-bottom: (@jumbotron-padding / 2);
+    margin-bottom: @jumbotron-padding*1.5;
     font-size: @jumbotron-font-size;
     font-weight: 200;
   }
@@ -38,7 +43,7 @@
 
     h1,
     .h1 {
-      font-size: (@font-size-base * 4.5);
+      font-size: (@font-size-base * 6.1);
     }
   }
 }
